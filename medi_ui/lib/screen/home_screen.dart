@@ -21,6 +21,31 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+      bottomNavigationBar: BottomAppBar(
+        shape: CircularNotchedRectangle(), // Optional: Creates a notch for FAB
+        notchMargin: 8, // Space around the notch
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: SingleChildScrollView(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                _buildNavItem(Icons.home, "Home", Colors.blue),
+                _buildNavItem(Icons.star, "For you", Colors.grey),
+                SizedBox(width: 40),
+                _buildNavItem(Icons.graphic_eq, "For you", Colors.grey),
+                _buildNavItem(Icons.person, "Profile", Colors.grey),
+              ],
+            ),
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {}, // Action for FloatingActionButton
+        backgroundColor: Colors.blue,
+        child: Icon(Icons.add),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -92,4 +117,21 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget _buildNavItem(IconData icon, String label, Color color) {
+  return Column(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      IconButton(
+        icon: Icon(icon, color: color),
+        onPressed: () {},
+      ),
+      Text(
+        label,
+        style:
+            TextStyle(color: color, fontSize: 12, fontWeight: FontWeight.w500),
+      ),
+    ],
+  );
 }
