@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medi_ui/screen/visit_screen.dart';
 import 'package:medi_ui/widgets/medical_widgets.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -22,15 +23,19 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(), // Optional: Creates a notch for FAB
-        notchMargin: 8, // Space around the notch
+        shape: CircularNotchedRectangle(),
+        notchMargin: 8,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: SingleChildScrollView(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                _buildNavItem(Icons.home, "Home", Colors.blue),
+                _buildNavItem(
+                  Icons.home,
+                  "Home",
+                  Colors.blue,
+                ),
                 _buildNavItem(Icons.star, "For you", Colors.grey),
                 SizedBox(width: 40),
                 _buildNavItem(Icons.graphic_eq, "For you", Colors.grey),
@@ -41,7 +46,7 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {}, // Action for FloatingActionButton
+        onPressed: () {},
         backgroundColor: Colors.blue,
         child: Icon(Icons.add),
       ),
@@ -54,8 +59,16 @@ class HomeScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Image.asset(
-                    'assets/visits.png',
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => VisitScreen()),
+                      );
+                    },
+                    child: Image.asset(
+                      'assets/visits.png',
+                    ),
                   ),
                   SizedBox(
                     width: 10,
