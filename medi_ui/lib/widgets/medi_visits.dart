@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
 
 class MediVisits extends StatelessWidget {
-  const MediVisits({super.key});
+  final String text;
+  final String image;
+  final IconData? icon;
+  // final Color color;
+  final String? hinttext;
+
+  const MediVisits(
+      {super.key,
+      required this.text,
+      required this.image,
+      // required this.color,
+      this.hinttext, this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +26,7 @@ class MediVisits extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(
-                  'assets/medi.png',
+                  image,
                   fit: BoxFit.cover,
                 ),
                 SizedBox(width: 10),
@@ -23,18 +34,23 @@ class MediVisits extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Dr. David Q. Cochran',
+                      text,
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     Row(
                       children: [
                         Text(
-                          'Assuata Medical Center',
+                          text,
                           style: TextStyle(fontSize: 14, color: Colors.grey),
                         ),
                         SizedBox(width: 5),
-                        Icon(Icons.location_on, size: 16, color: Colors.grey),
+                        Icon(icon
+                           ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('')
                       ],
                     ),
                   ],

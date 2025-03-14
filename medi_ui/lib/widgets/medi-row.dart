@@ -8,9 +8,10 @@ class MediR extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(15.0),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Row(
@@ -30,8 +31,9 @@ class MediR extends StatelessWidget {
             height: 10,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text(
                   'Assuata Medical Center',
@@ -42,6 +44,14 @@ class MediR extends StatelessWidget {
                 Spacer(),
                 Text('Cardiology'),
               ],
+            ),
+          ),
+          SizedBox(height: 10),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Text(
+              'Scheduled to March 15, 2023',
+              style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
         ],

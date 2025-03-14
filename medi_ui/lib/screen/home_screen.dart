@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 _buildNavItem(Icons.star, "For you", Colors.grey),
                 SizedBox(width: 40),
-                _buildNavItem(Icons.graphic_eq, "For you", Colors.grey),
+                _buildNavItem(Icons.insert_chart, "Reports", Colors.grey),
                 _buildNavItem(Icons.person, "Profile", Colors.grey),
               ],
             ),
@@ -47,8 +47,8 @@ class HomeScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: Colors.blue,
-        child: Icon(Icons.add),
+        backgroundColor:  Color.fromRGBO(124, 58, 237, 1.0),
+        child: Icon(Icons.grid_view),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SingleChildScrollView(

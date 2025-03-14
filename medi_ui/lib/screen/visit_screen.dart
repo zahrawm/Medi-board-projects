@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:medi_ui/widgets/button.dart';
 import 'package:medi_ui/widgets/medi-row.dart';
+
+import 'package:medi_ui/widgets/medi_pic.dart';
 import 'package:medi_ui/widgets/medi_visits.dart';
 
 class VisitScreen extends StatelessWidget {
@@ -12,16 +15,29 @@ class VisitScreen extends StatelessWidget {
         title: Text(
           'Upcoming Vists',
         ),
-        // I need to get the x  icon
-        // leading: Icon(Icons.one_x_mobiledata_outlined),
+        leading: Icon(
+          Icons.close,
+          color: Colors.grey,
+        ),
       ),
       body: Column(
         children: [
-          MediVisits(),
+          MediVisits(
+            text: 'Dr.Assualta Corahen',
+            image: 'assets/doc.png',
+            //update the icon
+            icon: Icons.open_in_new,
+          ),
           SizedBox(
             height: 15,
           ),
-          MediR()
+          MediR(),
+          SizedBox(height: 10),
+          MediButton(),
+          SizedBox(
+            height: 10,
+          ),
+          MediPic()
         ],
       ),
     );
