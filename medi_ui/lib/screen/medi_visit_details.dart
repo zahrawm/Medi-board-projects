@@ -29,7 +29,7 @@ class _MediVisitDetailsState extends State<MediVisitDetails> {
               children: [
                 const MedicalWidgets(
                   text: 'Tracking Records',
-                  image: 'assets/medi-records.png',
+                  image: 'assets/medi_records.png',
                   color: Colors.blue,
                 ),
                 Padding(
@@ -104,6 +104,7 @@ class _MediVisitDetailsState extends State<MediVisitDetails> {
                   height: 10,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
                       'Blood Test Results ',
@@ -116,9 +117,36 @@ class _MediVisitDetailsState extends State<MediVisitDetails> {
                     Icon(
                       Icons.chevron_right,
                     ),
-                    SizedBox(
-                      height: 10,
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      'Add records ',
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
+                    Spacer(),
+                    Container(
+                      width: 20,
+                      height: 20,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.grey,
+                      ),
+                      child: Center(
+                        child: Icon(
+                          Icons.add,
+                          color: Colors.white,
+                          size: 20,
+                        ),
+                      ),
+                    )
                   ],
                 )
               ],
