@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor:  Color.fromRGBO(124, 58, 237, 1.0),
+        backgroundColor: Color.fromRGBO(124, 58, 237, 1.0),
         child: Icon(Icons.grid_view),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

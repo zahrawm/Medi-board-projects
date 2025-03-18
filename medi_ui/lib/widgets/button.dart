@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MediButton extends StatelessWidget {
-  const MediButton({super.key});
+  final String text;
+  final IconData? icon;
+  const MediButton({super.key, required this.text, this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +19,10 @@ class MediButton extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text('Share'),
+          Text(text),
           SizedBox(width: 8),
           // change the icons
-          Icon(Icons.file_upload_outlined, color: Colors.white),
+          Icon(icon, color: Colors.white),
         ],
       ),
     );

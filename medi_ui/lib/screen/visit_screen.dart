@@ -33,7 +33,10 @@ class VisitScreen extends StatelessWidget {
           ),
           MediR(),
           SizedBox(height: 10),
-          MediButton(),
+          MediButton(
+            text: 'Share',
+            icon: Icons.file_upload_outlined,
+          ),
           SizedBox(
             height: 10,
           ),
