@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:medi_ui/screen/for_you_screen.dart';
+import 'package:medi_ui/screen/medical_test_screen.dart';
+import 'package:medi_ui/screen/medication_screen.dart';
+import 'package:medi_ui/screen/profile_screen.dart';
+import 'package:medi_ui/screen/report_screen.dart';
 import 'package:medi_ui/screen/visit_screen.dart';
+import 'package:medi_ui/screen/wearable_screen.dart';
 import 'package:medi_ui/widgets/medical_widgets.dart';
+
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,7 +17,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Hello Shmuel',
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
         ),
@@ -23,7 +31,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         notchMargin: 8,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -35,22 +43,35 @@ class HomeScreen extends StatelessWidget {
                   Icons.home,
                   "Home",
                   Colors.blue,
+                  () {},
                 ),
                 _buildNavItem(
                   Icons.star,
                   "For you",
                   Colors.grey,
+                  () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ForYouScreen())),
                 ),
-                SizedBox(width: 40),
+                const SizedBox(width: 40),
                 _buildNavItem(
                   Icons.trending_up_outlined,
                   "Reports",
                   Colors.grey,
+                  () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ReportScreen())),
                 ),
                 _buildNavItem(
                   Icons.person,
                   "Profile",
                   Colors.grey,
+                  () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ProfileScreen())),
                 ),
               ],
             ),
@@ -59,8 +80,8 @@ class HomeScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: Color.fromRGBO(124, 58, 237, 1.0),
-        child: Icon(Icons.grid_view),
+        backgroundColor: const Color.fromRGBO(124, 58, 237, 1.0),
+        child: const Icon(Icons.grid_view),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SingleChildScrollView(
@@ -78,85 +99,113 @@ class HomeScreen extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => VisitScreen()),
                       );
                     },
-                    child: Image.asset(
-                      'assets/visits.png',
-                    ),
+                    child: Image.asset('assets/visits.png'),
                   ),
-                  SizedBox(
-                    width: 10,
+                  const SizedBox(width: 10),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ReportScreen()),
+                      );
+                    },
+                    child: Image.asset('assets/reports.png'),
                   ),
-                  Image.asset('assets/reports.png'),
-                  SizedBox(
-                    width: 10,
+                  const SizedBox(width: 10),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ProfileScreen()),
+                      );
+                    },
+                    child: Image.asset('assets/medical_profile.png'),
                   ),
-                  Image.asset('assets/medical_profile.png')
                 ],
               ),
             ),
-            SizedBox(
-              height: 15,
-            ),
+            const SizedBox(height: 15),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Image.asset(
-                    'assets/medications.png',
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MedicationScreen()),
+                      );
+                    },
+                    child: Image.asset('assets/medications.png'),
                   ),
-                  SizedBox(
-                    width: 10,
+                  const SizedBox(width: 10),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MedicalTestScreen()),
+                      );
+                    },
+                    child: Image.asset('assets/medical_test.png'),
                   ),
-                  Image.asset('assets/medical_test.png'),
-                  SizedBox(
-                    width: 10,
+                  const SizedBox(width: 10),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const WearableScreen()),
+                      );
+                    },
+                    child: Image.asset('assets/wearabls.png'),
                   ),
-                  Image.asset('assets/wearabls.png')
                 ],
               ),
             ),
-            SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
             Image.asset('assets/chart.png'),
-            SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
             MedicalWidgets(
               image: 'assets/medi.png',
               text: 'Medications',
-              color: Color.fromRGBO(255, 195, 0, 1.0),
+              color: const Color.fromRGBO(255, 195, 0, 1.0),
             ),
             MedicalWidgets(
               image: 'assets/medi_visits.png',
               text: 'Visits',
-              color: Color.fromRGBO(34, 211, 238, 1.0),
+              color: const Color.fromRGBO(34, 211, 238, 1.0),
             ),
             MedicalWidgets(
               image: 'assets/tele.png',
               text: 'Tests',
-              color: Color.fromRGBO(251, 113, 133, 1.0),
+              color: const Color.fromRGBO(251, 113, 133, 1.0),
             ),
           ],
         ),
       ),
     );
   }
-}
 
-Widget _buildNavItem(IconData icon, String label, Color color) {
-  return Column(
-    mainAxisSize: MainAxisSize.min,
-    children: [
-      IconButton(
-        icon: Icon(icon, color: color),
-        onPressed: () {},
-      ),
-      Text(
-        label,
-        style:
-            TextStyle(color: color, fontSize: 12, fontWeight: FontWeight.w500),
-      ),
-    ],
-  );
+  Widget _buildNavItem(
+      IconData icon, String label, Color color, VoidCallback onPressed) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        IconButton(
+          icon: Icon(icon, color: color),
+          onPressed: onPressed,
+        ),
+        Text(
+          label,
+          style: TextStyle(
+              color: color, fontSize: 12, fontWeight: FontWeight.w500),
+        ),
+      ],
+    );
+  }
 }
