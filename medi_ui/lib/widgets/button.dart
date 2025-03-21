@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 class MediButton extends StatelessWidget {
   final String text;
   final IconData? icon;
-  const MediButton({super.key, required this.text, this.icon});
+   final Color color;
+  const MediButton({super.key, required this.text, this.icon, required this.color});
 
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
       onPressed: () {},
-      color: Color.fromRGBO(124, 58, 237, 1.0),
+      color: color,
       textColor: Colors.white,
       minWidth: 380,
       height: 50,

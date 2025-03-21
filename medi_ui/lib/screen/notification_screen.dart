@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medi_ui/widgets/button.dart';
 import 'package:medi_ui/widgets/clinicals.dart';
 
 class NotificationScreen extends StatelessWidget {
@@ -55,8 +56,8 @@ class NotificationScreen extends StatelessWidget {
             Text('To manage your notifications, simple toggle on/off '),
             Text('the topics  you wish to receive notifications to'),
             Container(
-              width: 450,
-              height: 450,
+              width: 470,
+              height: 470,
               padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               margin: EdgeInsets.all(8),
               decoration: BoxDecoration(
@@ -71,36 +72,43 @@ class NotificationScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Column(children: [
-                SwitchContainer(
-                  text: 'Clinical Trials',
-                  hintText: 'Get notified of the latest clinical trial',
-                  title: 'updates',
-                  switchValue: true,
-                  onChanged: (bool value) {},
-                ),
-                SwitchContainer(
-                  text: 'Clinical Trials',
-                  hintText: 'Get notified of the latest clinical trial',
-                  title: 'updates',
-                  switchValue: true,
-                  onChanged: (bool value) {},
-                ),
-                SwitchContainer(
-                  text: 'Clinical Trials',
-                  hintText: 'Get notified of the latest clinical trial',
-                  title: 'updates',
-                  switchValue: true,
-                  onChanged: (bool value) {},
-                ),
-                SwitchContainer(
-                  text: 'Clinical Trials',
-                  hintText: 'Get notified of the latest clinical trial',
-                  title: 'updates',
-                  switchValue: true,
-                  onChanged: (bool value) {},
-                ),
-              ]),
+              child: Column(
+                children: [
+                  SwitchContainer(
+                    text: 'Clinical Trials',
+                    hintText: 'Get notified of the latest clinical trial',
+                    title: 'updates',
+                    switchValue: true,
+                    onChanged: (bool value) {},
+                  ),
+                  SwitchContainer(
+                    text: 'New medicines',
+                    hintText: 'Stay updated for the new medicines',
+                    title: 'updates',
+                    switchValue: true,
+                    onChanged: (bool value) {},
+                  ),
+                  SwitchContainer(
+                    text: 'Clinical Trials',
+                    hintText: 'Get notified of the latest clinical trial',
+                    title: 'updates',
+                    switchValue: true,
+                    onChanged: (bool value) {},
+                  ),
+                  SwitchContainer(
+                    text: 'Clinical Trials',
+                    hintText: 'Get notified of the latest clinical trial',
+                    title: 'updates',
+                    switchValue: true,
+                    onChanged: (bool value) {},
+                  ),
+                  MediButton(
+                    icon: Icons.notifications_off_sharp,
+                    text: 'unsubscribe',
+                    color: Color.fromRGBO(124, 58, 237, 1.0),
+                  )
+                ],
+              ),
             ),
           ],
         ),

@@ -36,6 +36,7 @@ class VisitScreen extends StatelessWidget {
           MediButton(
             text: 'Share',
             icon: Icons.file_upload_outlined,
+            color: Color.fromRGBO(124, 58, 237, 1.0),
           ),
           SizedBox(
             height: 10,

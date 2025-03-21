@@ -27,7 +27,6 @@ class SwitchContainer extends StatelessWidget {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
               hintText!,
@@ -36,7 +35,6 @@ class SwitchContainer extends StatelessWidget {
                 color: Colors.black87,
               ),
             ),
-            Spacer(),
             CupertinoSwitch(
               value: switchValue,
               onChanged: onChanged,

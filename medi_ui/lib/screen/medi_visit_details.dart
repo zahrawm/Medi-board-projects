@@ -56,6 +56,7 @@ class _MediVisitDetailsState extends State<MediVisitDetails> {
                     ),
                     MediButton(
                       text: 'Invite Memebers',
+                      color: Color.fromRGBO(124, 58, 237, 1.0), 
                     ),
                     SizedBox(
                       height: 10,
