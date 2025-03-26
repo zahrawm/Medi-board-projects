@@ -1,18 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:medi_ui/widgets/small_circle.dart';
 
-class MedicalWidgets extends StatelessWidget {
+class QueryWidgets extends StatelessWidget {
   final String text;
   final String image;
-  final Color color;
-  
-
-  const MedicalWidgets(
-      {super.key,
-      required this.text,
-      required this.image,
-      required this.color,
-      });
+  const QueryWidgets({super.key, required this.text, required this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -39,11 +30,8 @@ class MedicalWidgets extends StatelessWidget {
             ),
             Row(
               children: [
-                SmallCircle(
-                  color: color,
-                ),
                 SizedBox(width: 8),
-                Icon(Icons.keyboard_arrow_down_rounded),
+                Icon(Icons.close),
               ],
             ),
           ],

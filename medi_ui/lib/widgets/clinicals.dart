@@ -27,11 +27,12 @@ class SwitchContainer extends StatelessWidget {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
               hintText!,
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 13,
                 color: Colors.black87,
               ),
             ),

@@ -74,12 +74,14 @@ class NotificationScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  SwitchContainer(
-                    text: 'Clinical Trials',
-                    hintText: 'Get notified of the latest clinical trial',
-                    title: 'updates',
-                    switchValue: true,
-                    onChanged: (bool value) {},
+                  Expanded(
+                    child: SwitchContainer(
+                      text: 'Clinical Trials',
+                      hintText: 'Get notified of the latest clinical trial',
+                      title: 'updates',
+                      switchValue: true,
+                      onChanged: (bool value) {},
+                    ),
                   ),
                   SwitchContainer(
                     text: 'New medicines',
