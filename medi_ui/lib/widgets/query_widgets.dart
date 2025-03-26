@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 
 class QueryWidgets extends StatelessWidget {
   final String text;
+  final String title;
   final String image;
-  const QueryWidgets({super.key, required this.text, required this.image});
+  const QueryWidgets(
+      {super.key,
+      required this.text,
+      required this.image,
+      required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +28,7 @@ class QueryWidgets extends StatelessWidget {
                 Image.asset(image),
                 SizedBox(width: 8),
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       text,
@@ -30,7 +36,7 @@ class QueryWidgets extends StatelessWidget {
                           TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      text,
+                      title,
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),

@@ -15,7 +15,18 @@ class WearableScreen extends StatelessWidget {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [QueryWidgets(text: 'Haemoglobin', image: 'assets/tele.png')],
+        children: [
+          QueryWidgets(
+            text: 'Haemoglobin',
+            image: 'assets/tele.png',
+            title: 'Iron',
+          ),
+          QueryWidgets(
+            text: 'Haemoglobin',
+            image: 'assets/tele.png',
+            title: 'Iron',
+          ),
+        ],
       ),
     );
   }
