@@ -22,9 +22,19 @@ class QueryWidgets extends StatelessWidget {
               children: [
                 Image.asset(image),
                 SizedBox(width: 8),
-                Text(
-                  text,
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                Column(
+                  children: [
+                    Text(
+                      text,
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      text,
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                  ],
                 ),
               ],
             ),
