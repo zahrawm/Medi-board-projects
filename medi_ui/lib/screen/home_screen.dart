@@ -8,8 +8,6 @@ import 'package:medi_ui/screen/visit_screen.dart';
 import 'package:medi_ui/screen/wearable_screen.dart';
 import 'package:medi_ui/widgets/medical_widgets.dart';
 
-
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
