@@ -113,6 +113,7 @@ class NotificationScreen extends StatelessWidget {
                     SizedBox(
                       height: 10,
                     ),
+                 
                   ],
                 ),
               ),

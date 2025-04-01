@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medi_ui/widgets/flag.dart';
 import 'package:medi_ui/widgets/line_charts.dart';
 import 'package:medi_ui/widgets/measure_history.dart';
 
@@ -82,6 +83,27 @@ class WearableScreen extends StatelessWidget {
                   height: 300,
                   padding: EdgeInsets.all(16),
                   child: LineChartSample()),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  Text(
+                    'Insights',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  Spacer(),
+                  Text('See all'),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Icon(Icons.arrow_forward_ios, size: 10)
+                ],
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Flag(),
             ],
           ),
         ),
