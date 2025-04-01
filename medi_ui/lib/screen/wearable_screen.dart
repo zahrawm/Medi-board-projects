@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medi_ui/widgets/line_charts.dart';
 import 'package:medi_ui/widgets/measure_history.dart';
 
 import 'package:medi_ui/widgets/query_widgets.dart';
@@ -55,7 +56,32 @@ class WearableScreen extends StatelessWidget {
               MeasureHistory(),
               MeasureHistory(),
               MeasureHistory(),
-              MeasureHistory()
+              MeasureHistory(),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Iron',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  Image.asset('assets/z.png'),
+                  Icon(Icons.menu)
+                ],
+              ),
+              Container(
+                  height: 300,
+                  padding: EdgeInsets.all(16),
+                  child: LineChartSample()),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                  height: 300,
+                  padding: EdgeInsets.all(16),
+                  child: LineChartSample()),
             ],
           ),
         ),
