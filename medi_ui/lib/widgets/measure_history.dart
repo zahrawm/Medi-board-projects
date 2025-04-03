@@ -4,8 +4,7 @@ class MeasureHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(16.0),
-      padding: EdgeInsets.all(16.0),
+      padding: EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

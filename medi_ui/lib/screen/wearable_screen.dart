@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:medi_ui/widgets/button.dart';
 import 'package:medi_ui/widgets/flag.dart';
 import 'package:medi_ui/widgets/line_charts.dart';
 import 'package:medi_ui/widgets/measure_history.dart';
+import 'package:medi_ui/widgets/medical_info.dart';
 
 import 'package:medi_ui/widgets/query_widgets.dart';
 
@@ -33,7 +35,7 @@ class WearableScreen extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               QueryWidgets(
-                text: 'Haemoglobin',
+                text: 'Iron',
                 image: 'assets/tele.png',
                 title: 'Iron',
               ),
@@ -68,9 +70,16 @@ class WearableScreen extends StatelessWidget {
                     'Iron',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
+                  Spacer(),
                   Image.asset('assets/z.png'),
+                  SizedBox(
+                    width: 10,
+                  ),
                   Icon(Icons.menu)
                 ],
+              ),
+              SizedBox(
+                height: 10,
               ),
               Container(
                   height: 300,
@@ -104,6 +113,15 @@ class WearableScreen extends StatelessWidget {
                 height: 5,
               ),
               Flag(),
+              SizedBox(
+                height: 10,
+              ),
+              MedicalInfo(),
+              MediButton(
+                icon: Icons.add,
+                text: 'Invite memebers',
+                color: Color.fromRGBO(124, 58, 237, 1.0),
+              ),
             ],
           ),
         ),
